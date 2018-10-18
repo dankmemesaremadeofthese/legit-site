@@ -1,0 +1,109 @@
+ <!DOCTYPE HTML>
+<head>
+	<title>Legit Site: Home</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+
+  <meta charset=utf-8>
+  <meta name=description content="">
+  <title>Legit Site: Ice breaker</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" type="text/css" href="css/jquery-comments.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- Data -->
+  <script type="text/javascript" src="data/comments-data.js"></script>
+
+  <!-- Libraries -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.textcomplete/1.8.0/jquery.textcomplete.js"></script>
+  <script type="text/javascript" src="js/jquery-comments.js"></script>
+
+  </style>
+
+  <!-- Init jquery-comments -->
+  <script type="text/javascript">
+    $(function() {
+      var saveComment = function(data) {
+
+        // Convert pings to human readable format
+        $(data.pings).each(function(index, id) {
+          var user = usersArray.filter(function(user){return user.id == id})[0];
+          data.content = data.content.replace('@' + id, '@' + user.fullname);
+        });
+
+        return data;
+      }
+      $('#comments-container').comments({
+        profilePictureURL: 'https://viima-app.s3.amazonaws.com/media/user_profiles/user-icon.png',
+        currentUserId: 1,
+        roundProfilePictures: true,
+        textareaRows: 1,
+        enableAttachments: true,
+        enableHashtags: true,
+        enablePinging: true,
+        getUsers: function(success, error) {
+          setTimeout(function() {
+            success(usersArray);
+          }, 500);
+        },
+        getComments: function(success, error) {
+          setTimeout(function() {
+            success(commentsArray);
+          }, 500);
+        },
+        postComment: function(data, success, error) {
+          setTimeout(function() {
+            success(saveComment(data));
+          }, 500);
+        },
+        putComment: function(data, success, error) {
+          setTimeout(function() {
+            success(saveComment(data));
+          }, 500);
+        },
+        deleteComment: function(data, success, error) {
+          setTimeout(function() {
+            success();
+          }, 500);
+        },
+        upvoteComment: function(data, success, error) {
+          setTimeout(function() {
+            success(data);
+          }, 500);
+        },
+        uploadAttachments: function(dataArray, success, error) {
+          setTimeout(function() {
+            success(dataArray);
+          }, 500);
+        },
+      });
+    });
+  </script>
+
+  <script>
+
+  </script>
+</head>
+<body>
+  <a href="index.html"><h1>Legit Site</h1></a>
+
+  <div id="home-div" class="div-parent">
+
+  <h2>Welcome to Legit Site!</h2>
+	<p>This is a simple site where you can play without pesky</p>
+  <p>schools blocking the fun!</p>
+	<h3>Below are links to the current games.</h3>
+	<ul>
+		<li><a href="crow-game.html">Crow Game</a></li>
+		<li><a href="ice-breaker.html">Ice Breaker</a></li>
+		<li><a href="fbwg.html">Fire Boy & Water Girl</a></li>
+	</ul>
+  </div>
+
+</body>
+<footer>
+  <div class="comments" id="comments-container"></div>
+</footer>
