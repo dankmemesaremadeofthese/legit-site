@@ -102,6 +102,13 @@ footer {
 	font-size: 1vw;
 }
 
+.h1-img {
+	width: 40%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #fbwg {
 	width: 55vw;
 }
@@ -135,10 +142,6 @@ html {
     overflow: scroll;
     overflow-x: hidden;
 }
-::-webkit-scrollbar {
-    width: 0px;
-    background: transparent;
-}
 
 #scratch {
     display: block;
@@ -165,12 +168,6 @@ html {
 
 }
 
-.h1-img {
-	width: 40%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 textarea{
   resize: none;
@@ -327,6 +324,10 @@ a{
   background: #999;
 }
 
+.comments {
+	width: 50%;
+}
+
 .menu-left {
   margin-right: 5px;
 }
@@ -349,4 +350,23 @@ a{
 
 .menu-right:after{
   margin-left: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+    #right {
+			width: 100%;
+			float: left;
+			height: 50%;
+		}
+
+		ul {
+			margin-left:auto;
+			margin-right: auto;
+		}
+
+		#left{
+			width: 100%;
+			float: left;
+			height: 50%;
+		}
 }
