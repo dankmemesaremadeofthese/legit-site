@@ -48,6 +48,14 @@ ul {
 	list-style: none;
 }
 
+footer {
+	background-image: url("img/1016.png");
+	border: solid;
+	border-radius: 25px;
+	width: 75%;
+	padding: 10vw;
+}
+
 ::-webkit-scrollbar {
     width: 0px;
     background: transparent;
@@ -67,6 +75,7 @@ ul {
 	margin-right: auto;
 	padding-left: 2.5%;
 	padding-right: 2.5%;
+	padding-bottom: 5vw;
 }
 
 .div-child {
