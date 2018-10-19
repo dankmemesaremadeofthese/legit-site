@@ -1,13 +1,11 @@
  <!DOCTYPE HTML>
 <head>
-	<title>Legit Site: Home</title>
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
-
   <meta charset=utf-8>
   <meta name=description content="">
-  <title>Legit Site: Ice breaker</title>
+  <title>Legit Site: Papa's Donuteria</title>
 
   <!-- Styles -->
   <link rel="stylesheet" type="text/css" href="css/jquery-comments.css">
@@ -83,27 +81,37 @@
     });
   </script>
 
-  <script>
 
+  <script>
+  function hover(element) {
+    element.setAttribute('src', 'img/ice-breaker2.png');
+  }
+
+  function unhover(element) {
+    element.setAttribute('src', 'img/ice-breaker.png');
+  }
   </script>
 </head>
 <body>
-  <a href="index.html"><h1>Legit Site</h1></a>
+  <a href="index.html"><h1>Legit-Site</h1></a>
 
-  <div id="home-div" class="div-parent">
 
-  <h2>Welcome to Legit Site!</h2>
-	<p>This is a simple site where you can play without pesky</p>
-  <p>schools blocking the fun!</p>
-	<h3>Below are links to the current games.</h3>
-	<ul>
-		<li><a href="papa.html">Papa's Donuteria</a></li>
-		<li><a href="ice-breaker.html">Ice Breaker</a></li>
-		<li><a href="fbwg.html">Fire Boy & Water Girl</a></li>
-	</ul>
+  <div class="div-parent">
+	<div id="right" class="div-child">
+		<object width="90%" height="100%">
+			<param name="game" value="swf/papa.swf">
+				<embed class="flash-content" src="swf/papa.swf" width="85%" height="75%">
+				</embed>
+		</object>
+	</div>
+	<div id="left" class="div-child">
+		<ul class="side-list">
+      <li><a href="ice-breaker.html"><img src="img/icebreaker.jpg"></a></li>
+			<li><a href="fbwg.html"><img src="img/fbwg.png"></a></li>
+		</ul>
   </div>
 
 </body>
 <footer>
-    <div class="comments" id="comments-container"></div>
+  <div class="comments" id="comments-container"></div>
 </footer>
